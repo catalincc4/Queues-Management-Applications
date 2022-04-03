@@ -1,0 +1,21 @@
+.text-field {
+    -fx-prompt-text-fill:black;
+    -fx-text-fill: #ff0000;
+    -fx-prompt-text-aligment: centre;
+}
+
+.button{
+    -fx-background-color: #b3d1ff;
+    -fx-background-radius: 5;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-border-insets: -0.5;
+}
+
+.button:pressed {
+    -fx-translate-y: 4px;
+}
+.button:hover{
+    -fx-background-color: azure;
+}

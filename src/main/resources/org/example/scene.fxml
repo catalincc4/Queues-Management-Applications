@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #408999;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GUI.SimulationFrame">
+    <children>
+        <TextField fx:id="numbersOfQueues" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="144.0" promptText="Numbers of queues" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="135.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="numberOfClients" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="180.0" promptText="Number of  clients" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="170.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="minimumArrivalTime" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="211.0" prefHeight="22.0" prefWidth="158.0" promptText="Minimum arrival time" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="205.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="maximumArrivalTime" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="240.0" prefHeight="22.0" prefWidth="158.0" promptText="Maximum arrival time" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="240.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <Button fx:id="startButton" cache="true" layoutX="38.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#startButtonAction" prefHeight="25.0" prefWidth="158.0" text="Start" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="340.0" />
+        <Text layoutX="213.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Simulator">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Text>
+        <ProgressBar fx:id="progressBar" layoutX="300.0" layoutY="344.0" prefHeight="18.0" prefWidth="244.0" progress="0.0" AnchorPane.topAnchor="345.0" />
+        <TextField fx:id="minimumServiceTime" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="273.0" prefHeight="22.0" prefWidth="158.0" promptText="Minimum service time" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="273.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="maximumServiceTime" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="307.0" prefHeight="22.0" prefWidth="158.0" promptText="Maximum service time" styleClass="text-field" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="307.0">
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="1.0" />
+            </opaqueInsets>
+        </TextField>
+        <ComboBox fx:id="comboBox" layoutX="347.0" layoutY="99.0" prefWidth="150.0" promptText="Queue to be displayed" AnchorPane.topAnchor="100.0" />
+        <Text layoutX="347.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of clients in queue :" wrappingWidth="150.0">
+            <font>
+                <Font name="Times New Roman" size="13.0" />
+            </font>
+        </Text>
+        <Text fx:id="numberQueuesText" layoutX="497.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="37.0">
+            <font>
+                <Font name="Times New Roman" size="13.0" />
+            </font>
+        </Text>
+      <Text fx:id="errorText" fill="#e80909" layoutX="213.0" layoutY="64.0" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="174.2080078125">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="347.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waitting Period:" wrappingWidth="150.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="waittingPeriodText" layoutX="497.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="37.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="stateText" layoutX="203.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.13671875" />
+      <TextField fx:id="simulationTime" alignment="TOP_CENTER" blendMode="SCREEN" layoutX="40.0" layoutY="102.0" promptText="Max simulation time" styleClass="text-field" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="1.0" />
+         </opaqueInsets>
+      </TextField>
+    </children>
+</AnchorPane>
